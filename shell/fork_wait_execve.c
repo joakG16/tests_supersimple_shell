@@ -6,11 +6,11 @@
 
 int main(void)
 {
-	char *argv[] = {"/bin/ls", "-l", "/tmp", NULL};
+	char *argv[] = {"./a.out", NULL};
 	pid_t child_pid;
 	int i, status;
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 2; i++)
 	{
 		child_pid = fork();
 		if (child_pid == -1)
