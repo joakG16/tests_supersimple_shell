@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
-
-int main(void);
-
-extern char **environ;
+#include "main.h"
 
 char *_getenv(const char *name)
 {
@@ -39,14 +32,8 @@ char *_getenv(const char *name)
 int main(void)
 {
 	char *path = _getenv("PATH");
-	char *pathtok;
 
-	pathtok = strtok(path, ":");
-	while (pathtok != NULL)
-	{
-		printf("%s\n", pathtok);
-		pathtok = strtok(NULL, ":");
-	}
+	printf("%s\n", path);
 
 	return (0);
 }
